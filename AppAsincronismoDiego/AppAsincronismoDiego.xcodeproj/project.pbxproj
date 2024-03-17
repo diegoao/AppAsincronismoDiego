@@ -16,8 +16,14 @@
 		52A5CE452BA6D65C00F2CFE7 /* AppAsincronismoDiegoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CE442BA6D65C00F2CFE7 /* AppAsincronismoDiegoUITestsLaunchTests.swift */; };
 		52A5CE632BA6E7DE00F2CFE7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CE612BA6E7DE00F2CFE7 /* LoginViewController.swift */; };
 		52A5CE662BA6E9C300F2CFE7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CE652BA6E9C300F2CFE7 /* LoginView.swift */; };
-		52A5CE692BA728A400F2CFE7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CE672BA728A400F2CFE7 /* HomeViewController.swift */; };
-		52A5CE6A2BA728A400F2CFE7 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A5CE682BA728A400F2CFE7 /* HomeViewController.xib */; };
+		52A5CE6C2BA76EDD00F2CFE7 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CE6B2BA76EDD00F2CFE7 /* AppState.swift */; };
+		52A5CE6E2BA7743500F2CFE7 /*  LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CE6D2BA7743500F2CFE7 /*  LoginUseCase.swift */; };
+		52A5CE702BA77B2B00F2CFE7 /* LoginRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CE6F2BA77B2B00F2CFE7 /* LoginRepositoryProtocol.swift */; };
+		52A5CE732BA77C1E00F2CFE7 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CE722BA77C1E00F2CFE7 /* Endpoints.swift */; };
+		52A5CE752BA77C5100F2CFE7 /* HTTPResponseCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CE742BA77C5100F2CFE7 /* HTTPResponseCodes.swift */; };
+		52A5CE772BA77CB000F2CFE7 /* HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CE762BA77CB000F2CFE7 /* HTTPMethods.swift */; };
+		52A5CE792BA77F4600F2CFE7 /* ConstantsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CE782BA77F4600F2CFE7 /* ConstantsApp.swift */; };
+		52A5CE7B2BA7800500F2CFE7 /* NetworkLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CE7A2BA7800500F2CFE7 /* NetworkLogin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +57,14 @@
 		52A5CE442BA6D65C00F2CFE7 /* AppAsincronismoDiegoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAsincronismoDiegoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		52A5CE612BA6E7DE00F2CFE7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		52A5CE652BA6E9C300F2CFE7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		52A5CE672BA728A400F2CFE7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		52A5CE682BA728A400F2CFE7 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		52A5CE6B2BA76EDD00F2CFE7 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		52A5CE6D2BA7743500F2CFE7 /*  LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " LoginUseCase.swift"; sourceTree = "<group>"; };
+		52A5CE6F2BA77B2B00F2CFE7 /* LoginRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositoryProtocol.swift; sourceTree = "<group>"; };
+		52A5CE722BA77C1E00F2CFE7 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		52A5CE742BA77C5100F2CFE7 /* HTTPResponseCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponseCodes.swift; sourceTree = "<group>"; };
+		52A5CE762BA77CB000F2CFE7 /* HTTPMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethods.swift; sourceTree = "<group>"; };
+		52A5CE782BA77F4600F2CFE7 /* ConstantsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsApp.swift; sourceTree = "<group>"; };
+		52A5CE7A2BA7800500F2CFE7 /* NetworkLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +166,7 @@
 		52A5CE532BA6E3E700F2CFE7 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				52A5CE6B2BA76EDD00F2CFE7 /* AppState.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -170,8 +183,6 @@
 		52A5CE552BA6E42600F2CFE7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				52A5CE672BA728A400F2CFE7 /* HomeViewController.swift */,
-				52A5CE682BA728A400F2CFE7 /* HomeViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -198,6 +209,7 @@
 		52A5CE582BA6E45B00F2CFE7 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				52A5CE6F2BA77B2B00F2CFE7 /* LoginRepositoryProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -205,6 +217,7 @@
 		52A5CE592BA6E48500F2CFE7 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				52A5CE6D2BA7743500F2CFE7 /*  LoginUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -226,6 +239,7 @@
 		52A5CE5C2BA6E4A600F2CFE7 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				52A5CE782BA77F4600F2CFE7 /* ConstantsApp.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -250,6 +264,8 @@
 		52A5CE5F2BA6E4C400F2CFE7 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				52A5CE712BA77C0100F2CFE7 /* BaseNetwork */,
+				52A5CE7A2BA7800500F2CFE7 /* NetworkLogin.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -259,6 +275,16 @@
 			children = (
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		52A5CE712BA77C0100F2CFE7 /* BaseNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				52A5CE722BA77C1E00F2CFE7 /* Endpoints.swift */,
+				52A5CE742BA77C5100F2CFE7 /* HTTPResponseCodes.swift */,
+				52A5CE762BA77CB000F2CFE7 /* HTTPMethods.swift */,
+			);
+			path = BaseNetwork;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,7 +393,6 @@
 			files = (
 				52A5CE2E2BA6D65C00F2CFE7 /* LaunchScreen.storyboard in Resources */,
 				52A5CE2B2BA6D65C00F2CFE7 /* Assets.xcassets in Resources */,
-				52A5CE6A2BA728A400F2CFE7 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,10 +417,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52A5CE692BA728A400F2CFE7 /* HomeViewController.swift in Sources */,
+				52A5CE7B2BA7800500F2CFE7 /* NetworkLogin.swift in Sources */,
+				52A5CE772BA77CB000F2CFE7 /* HTTPMethods.swift in Sources */,
+				52A5CE6E2BA7743500F2CFE7 /*  LoginUseCase.swift in Sources */,
 				52A5CE632BA6E7DE00F2CFE7 /* LoginViewController.swift in Sources */,
 				52A5CE222BA6D65A00F2CFE7 /* AppDelegate.swift in Sources */,
+				52A5CE702BA77B2B00F2CFE7 /* LoginRepositoryProtocol.swift in Sources */,
+				52A5CE792BA77F4600F2CFE7 /* ConstantsApp.swift in Sources */,
+				52A5CE6C2BA76EDD00F2CFE7 /* AppState.swift in Sources */,
 				52A5CE662BA6E9C300F2CFE7 /* LoginView.swift in Sources */,
+				52A5CE752BA77C5100F2CFE7 /* HTTPResponseCodes.swift in Sources */,
+				52A5CE732BA77C1E00F2CFE7 /* Endpoints.swift in Sources */,
 				52A5CE242BA6D65A00F2CFE7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

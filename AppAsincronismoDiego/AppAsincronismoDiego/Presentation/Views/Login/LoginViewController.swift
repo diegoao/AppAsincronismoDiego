@@ -38,6 +38,6 @@ class LoginViewController: UIViewController {
         view = loginView
         
     }
-    
 
 }
+

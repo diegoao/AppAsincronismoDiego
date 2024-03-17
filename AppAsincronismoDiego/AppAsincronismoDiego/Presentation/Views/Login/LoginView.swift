@@ -12,7 +12,7 @@ import UIKit
 
 class LoginView: UIView {
     
-    //Fondo
+    //Fondo para ello creo una imagen como cuando lo hacemos en el xib y pongo la propiedad AspectFill para que salga centrada
     public let fondoImage = {
         let image = UIImageView(image: UIImage(named: "fondo2"))
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -66,8 +66,7 @@ class LoginView: UIView {
         return textField
     }()
     
-    //boton
-    
+    // Botón
     let buttonLogin = {
         let button = UIButton(type: .system)
 
@@ -92,21 +91,16 @@ class LoginView: UIView {
     
  
     
-    
+    //MARK: - //añadimos los items de la UI a la view
     func setupViews(){
-        //añadimos los items de la UI a la view
         
-//        let backImage = UIImage(named: "fondo2")!
-//        backgroundColor = UIColor(patternImage: backImage)
-//        contentMode = .center
         addSubview(fondoImage)
         addSubview(logoImage)
         addSubview(emailTextField)
         addSubview(passwordTextField)
         addSubview(buttonLogin)
         
-        //reglas de autoLayout
-        
+        //Reglas autolayout
         NSLayoutConstraint.activate([
             
             // Fondo
@@ -117,8 +111,8 @@ class LoginView: UIView {
 
             // Logo
             logoImage.topAnchor.constraint(equalTo: topAnchor, constant: 120),
-            logoImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            logoImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            logoImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
+            logoImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
             logoImage.heightAnchor.constraint(equalToConstant: 70),
 
             // Email
@@ -144,7 +138,7 @@ class LoginView: UIView {
         
     }
     
-    //funicones para devolver los objetos al ViewController
+    //MARK: - Creo funciones para devolver los objetos al ViewController
     func getFondoImageView() -> UIImageView {
         fondoImage
     }
