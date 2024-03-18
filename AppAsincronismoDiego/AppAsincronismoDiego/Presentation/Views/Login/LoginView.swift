@@ -33,7 +33,7 @@ class LoginView: UIView {
     public let emailTextField =  {
         let textField = UITextField()
         textField.backgroundColor = .yellow.withAlphaComponent(0.9)
-        textField.textColor = .orange
+        textField.textColor = .red
         textField.font = UIFont.systemFont(ofSize: 18)
         textField.borderStyle = .roundedRect
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -52,7 +52,7 @@ class LoginView: UIView {
     public let passwordTextField =  {
         let textField = UITextField()
         textField.backgroundColor = .yellow.withAlphaComponent(0.9)
-        textField.textColor = .orange
+        textField.textColor = .red
         textField.font = UIFont.systemFont(ofSize: 18)
         textField.borderStyle = .roundedRect
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -73,7 +73,6 @@ class LoginView: UIView {
     // Botón
     let buttonLogin = {
         let button = UIButton(type: .system)
-
         button.setTitle("Login", for: .normal)
         button.backgroundColor = .orange.withAlphaComponent(0.6)
         button.setTitleColor(.white, for: .normal)

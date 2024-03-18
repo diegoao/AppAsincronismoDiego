@@ -40,10 +40,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     }
                 case .success:
                     //ver home
-                    print("home")
+                    DispatchQueue.main.async {
+                        print("vamos para el home")
+                        navi = UINavigationController(rootViewController: HomeViewController(appState: self.appState))
+                        self.window!.rootViewController = navi
+                        self.window!.makeKeyAndVisible()
+                    }
                 case.error:
                     //error
-                    print("error")
+                    DispatchQueue.main.async {
+                        print("vamos para el error")
+                        navi = UINavigationController(rootViewController: ErrorViewController(appState: self.appState, error: "Error in user or password"))
+                        self.window!.rootViewController = navi
+                        self.window!.makeKeyAndVisible()
+                    }
                 }
             })
     }

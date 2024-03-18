@@ -17,17 +17,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="bRE-Qh-2hw">
-                                <rect key="frame" x="38" y="311" width="317" height="202"/>
+                                <rect key="frame" x="38" y="325" width="317" height="202"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="202" id="RC2-PT-efz"/>
                                     <constraint firstAttribute="width" constant="317" id="SYI-hN-bBi"/>
                                 </constraints>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Práctica App Asincronismo y programación reactiva realizada por Diego Andrades" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="j3G-W6-N7Q">
+                                <rect key="frame" x="50" y="535" width="293" height="181"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="293" id="Bgv-KL-lBm"/>
+                                    <constraint firstAttribute="height" constant="181" id="ehM-h9-w11"/>
+                                </constraints>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="bRE-Qh-2hw" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="9kU-Zp-jQm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="j3G-W6-N7Q" secondAttribute="bottom" constant="102" id="cGj-f7-1hu"/>
+                            <constraint firstItem="j3G-W6-N7Q" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="jXX-T5-nGb"/>
                             <constraint firstItem="bRE-Qh-2hw" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="kks-MQ-Kj0"/>
                         </constraints>
                     </view>
@@ -41,6 +54,9 @@
         <image name="title" width="787" height="136"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
