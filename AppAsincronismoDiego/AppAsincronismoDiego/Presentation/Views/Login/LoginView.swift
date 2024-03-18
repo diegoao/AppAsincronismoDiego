@@ -39,6 +39,8 @@ class LoginView: UIView {
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.autocapitalizationType = .none
         textField.autocorrectionType = .no
+        textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
         textField.placeholder = NSLocalizedString("Email", comment: "Es el email")
         textField.layer.cornerRadius = 10
         //Sin esta parte no podemos ver el corner radius
@@ -54,6 +56,8 @@ class LoginView: UIView {
         textField.font = UIFont.systemFont(ofSize: 18)
         textField.borderStyle = .roundedRect
         textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
         textField.autocapitalizationType = .none
         textField.autocorrectionType = .no
         textField.placeholder = NSLocalizedString("Password", comment: "The Text password")

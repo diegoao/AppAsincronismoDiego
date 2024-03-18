@@ -6,17 +6,46 @@
 //
 
 import UIKit
+import Combine
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    //MARK: - ViewModel global
+    var appState: AppState = AppState(loginUseCase: LoginUseCase())
+    var cancelable: AnyCancellable?
 		
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windoScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windoScene)
-        self.window!.rootViewController = LoginViewController()
-        self.window!.makeKeyAndVisible()
+        
+        //Evaluarmos si hacemos autologin
+        appState.validateControlLogin()
+        
+        //Create validation Controller
+        var navi: UINavigationController?
+        
+        //ViewRouter
+        self.cancelable = appState.$statusLogin
+            .sink(receiveValue: { estado in
+                switch estado {
+                case .notValidate, .none:
+                    //ver el login
+                    DispatchQueue.main.async {
+                        print("vamos para el login")
+                        navi = UINavigationController(rootViewController: LoginViewController(appState: self.appState))
+                        self.window!.rootViewController = navi
+                        self.window!.makeKeyAndVisible()
+                    }
+                case .success:
+                    //ver home
+                    print("home")
+                case.error:
+                    //error
+                    print("error")
+                }
+            })
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

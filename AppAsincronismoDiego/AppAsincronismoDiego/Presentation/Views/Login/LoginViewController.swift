@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Combine
+import CombineCocoa
 
 class LoginViewController: UIViewController {
     
@@ -16,10 +18,78 @@ class LoginViewController: UIViewController {
     var emailTextField: UITextField?
     var passwordTextField: UITextField?
     
+    //User and password
+    private var usr: String = ""
+    private var pass: String = ""
+    
+    //Combine
+    private var suscriptors = Set<AnyCancellable>()
+    
+    
+    
+    private  var appState: AppState?
+    
+    init(appState: AppState){
+        self.appState = appState
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        bindingUI()
+      
+    }
+    
+    //Suscriptor
+    func bindingUI(){
+        //user(email)
+        if let emailTextField = self.emailTextField{
+            emailTextField.textPublisher
+                .receive(on: DispatchQueue.main)
+                .sink { [weak self] data in
+                    if let user = data{
+                        print(user)
+                        self?.usr = user
+                    }
+                }
+                .store(in: &suscriptors)
+        }
+        
+        //Password(password)
+        if let passwordTextField = self.passwordTextField{
+            passwordTextField.textPublisher
+                .receive(on: DispatchQueue.main)
+                .sink { [weak self] data in
+                    if let password = data{
+                        print(password)
+                        self?.pass = password
+                    }
+                }
+                .store(in: &suscriptors)
+        }
+        
+        //Button Login
+        if let loginButton = self.loginButton {
+            loginButton.tapPublisher
+                .sink { [weak self] _ in
+                    //Call of Login
+                    if let user = self?.usr,
+                       let password = self?.pass{
+        
+                    self?.appState?.loginApp(user: user, password: password)
+                
+                    }
+                }
+                .store(in: &suscriptors)
+        }
+        
     }
     
     
