@@ -25,10 +25,18 @@
 		52A5CE7D2BA8BD0700F2CFE7 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CE7C2BA8BD0700F2CFE7 /* LoginRepository.swift */; };
 		52A5CE802BA8BF4500F2CFE7 /* KcLibraryswift in Frameworks */ = {isa = PBXBuildFile; productRef = 52A5CE7F2BA8BF4500F2CFE7 /* KcLibraryswift */; };
 		52A5CE832BA8C73D00F2CFE7 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 52A5CE822BA8C73D00F2CFE7 /* CombineCocoa */; };
-		52A5CE862BA8D01D00F2CFE7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CE842BA8D01D00F2CFE7 /* HomeViewController.swift */; };
-		52A5CE872BA8D01D00F2CFE7 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A5CE852BA8D01D00F2CFE7 /* HomeViewController.xib */; };
 		52A5CE8A2BA8D02E00F2CFE7 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CE882BA8D02E00F2CFE7 /* ErrorViewController.swift */; };
 		52A5CE8B2BA8D02E00F2CFE7 /* ErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A5CE892BA8D02E00F2CFE7 /* ErrorViewController.xib */; };
+		52A5CE902BA9001600F2CFE7 /* HerosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CE8F2BA9001600F2CFE7 /* HerosModel.swift */; };
+		52A5CE922BA900D000F2CFE7 /* HerosRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CE912BA900D000F2CFE7 /* HerosRepositoryProtocol.swift */; };
+		52A5CE942BA9019200F2CFE7 /* NetworkHeros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CE932BA9019200F2CFE7 /* NetworkHeros.swift */; };
+		52A5CE962BAA162C00F2CFE7 /* HerosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CE952BAA162C00F2CFE7 /* HerosRepository.swift */; };
+		52A5CE992BAA1A5600F2CFE7 /* HeroUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CE982BAA1A5600F2CFE7 /* HeroUseCase.swift */; };
+		52A5CE9B2BAA1BE100F2CFE7 /* HerosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CE9A2BAA1BE100F2CFE7 /* HerosViewModel.swift */; };
+		52A5CE9E2BAA1DC700F2CFE7 /* HerosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CE9C2BAA1DC700F2CFE7 /* HerosTableViewController.swift */; };
+		52A5CEA32BAA248800F2CFE7 /* HeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CEA12BAA248800F2CFE7 /* HeroTableViewCell.swift */; };
+		52A5CEA42BAA248800F2CFE7 /* HeroTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A5CEA22BAA248800F2CFE7 /* HeroTableViewCell.xib */; };
+		52A5CEA62BAA286900F2CFE7 /*  UIImageView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CEA52BAA286900F2CFE7 /*  UIImageView+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,11 +69,19 @@
 		52A5CE782BA77F4600F2CFE7 /* ConstantsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsApp.swift; sourceTree = "<group>"; };
 		52A5CE7A2BA7800500F2CFE7 /* NetworkLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogin.swift; sourceTree = "<group>"; };
 		52A5CE7C2BA8BD0700F2CFE7 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
-		52A5CE842BA8D01D00F2CFE7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		52A5CE852BA8D01D00F2CFE7 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		52A5CE882BA8D02E00F2CFE7 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		52A5CE892BA8D02E00F2CFE7 /* ErrorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorViewController.xib; sourceTree = "<group>"; };
 		52A5CE8C2BA8D5A900F2CFE7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		52A5CE8F2BA9001600F2CFE7 /* HerosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosModel.swift; sourceTree = "<group>"; };
+		52A5CE912BA900D000F2CFE7 /* HerosRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosRepositoryProtocol.swift; sourceTree = "<group>"; };
+		52A5CE932BA9019200F2CFE7 /* NetworkHeros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHeros.swift; sourceTree = "<group>"; };
+		52A5CE952BAA162C00F2CFE7 /* HerosRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosRepository.swift; sourceTree = "<group>"; };
+		52A5CE982BAA1A5600F2CFE7 /* HeroUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroUseCase.swift; sourceTree = "<group>"; };
+		52A5CE9A2BAA1BE100F2CFE7 /* HerosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosViewModel.swift; sourceTree = "<group>"; };
+		52A5CE9C2BAA1DC700F2CFE7 /* HerosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosTableViewController.swift; sourceTree = "<group>"; };
+		52A5CEA12BAA248800F2CFE7 /* HeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTableViewCell.swift; sourceTree = "<group>"; };
+		52A5CEA22BAA248800F2CFE7 /* HeroTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroTableViewCell.xib; sourceTree = "<group>"; };
+		52A5CEA52BAA286900F2CFE7 /*  UIImageView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " UIImageView+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				52A5CE6B2BA76EDD00F2CFE7 /* AppState.swift */,
+				52A5CE9A2BAA1BE100F2CFE7 /* HerosViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -168,8 +185,8 @@
 		52A5CE552BA6E42600F2CFE7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				52A5CE842BA8D01D00F2CFE7 /* HomeViewController.swift */,
-				52A5CE852BA8D01D00F2CFE7 /* HomeViewController.xib */,
+				52A5CEA02BAA244F00F2CFE7 /* Cell */,
+				52A5CE9C2BAA1DC700F2CFE7 /* HerosTableViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -199,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				52A5CE6F2BA77B2B00F2CFE7 /* LoginRepositoryProtocol.swift */,
+				52A5CE912BA900D000F2CFE7 /* HerosRepositoryProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -207,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				52A5CE6D2BA7743500F2CFE7 /*  LoginUseCase.swift */,
+				52A5CE982BAA1A5600F2CFE7 /* HeroUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -214,6 +233,7 @@
 		52A5CE5A2BA6E48C00F2CFE7 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				52A5CE8F2BA9001600F2CFE7 /* HerosModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -221,6 +241,7 @@
 		52A5CE5B2BA6E49800F2CFE7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				52A5CEA52BAA286900F2CFE7 /*  UIImageView+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -255,6 +276,7 @@
 			children = (
 				52A5CE712BA77C0100F2CFE7 /* BaseNetwork */,
 				52A5CE7A2BA7800500F2CFE7 /* NetworkLogin.swift */,
+				52A5CE932BA9019200F2CFE7 /* NetworkHeros.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -263,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				52A5CE7C2BA8BD0700F2CFE7 /* LoginRepository.swift */,
+				52A5CE952BAA162C00F2CFE7 /* HerosRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -275,6 +298,15 @@
 				52A5CE762BA77CB000F2CFE7 /* HTTPMethods.swift */,
 			);
 			path = BaseNetwork;
+			sourceTree = "<group>";
+		};
+		52A5CEA02BAA244F00F2CFE7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				52A5CEA12BAA248800F2CFE7 /* HeroTableViewCell.swift */,
+				52A5CEA22BAA248800F2CFE7 /* HeroTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,8 +401,8 @@
 			files = (
 				52A5CE2E2BA6D65C00F2CFE7 /* LaunchScreen.storyboard in Resources */,
 				52A5CE8B2BA8D02E00F2CFE7 /* ErrorViewController.xib in Resources */,
+				52A5CEA42BAA248800F2CFE7 /* HeroTableViewCell.xib in Resources */,
 				52A5CE2B2BA6D65C00F2CFE7 /* Assets.xcassets in Resources */,
-				52A5CE872BA8D01D00F2CFE7 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,18 +421,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				52A5CE7B2BA7800500F2CFE7 /* NetworkLogin.swift in Sources */,
+				52A5CE922BA900D000F2CFE7 /* HerosRepositoryProtocol.swift in Sources */,
+				52A5CE942BA9019200F2CFE7 /* NetworkHeros.swift in Sources */,
 				52A5CE7D2BA8BD0700F2CFE7 /* LoginRepository.swift in Sources */,
+				52A5CE9B2BAA1BE100F2CFE7 /* HerosViewModel.swift in Sources */,
 				52A5CE772BA77CB000F2CFE7 /* HTTPMethods.swift in Sources */,
 				52A5CE6E2BA7743500F2CFE7 /*  LoginUseCase.swift in Sources */,
 				52A5CE632BA6E7DE00F2CFE7 /* LoginViewController.swift in Sources */,
-				52A5CE862BA8D01D00F2CFE7 /* HomeViewController.swift in Sources */,
+				52A5CE9E2BAA1DC700F2CFE7 /* HerosTableViewController.swift in Sources */,
 				52A5CE222BA6D65A00F2CFE7 /* AppDelegate.swift in Sources */,
+				52A5CE962BAA162C00F2CFE7 /* HerosRepository.swift in Sources */,
 				52A5CE8A2BA8D02E00F2CFE7 /* ErrorViewController.swift in Sources */,
+				52A5CE992BAA1A5600F2CFE7 /* HeroUseCase.swift in Sources */,
+				52A5CEA62BAA286900F2CFE7 /*  UIImageView+extension.swift in Sources */,
+				52A5CEA32BAA248800F2CFE7 /* HeroTableViewCell.swift in Sources */,
 				52A5CE702BA77B2B00F2CFE7 /* LoginRepositoryProtocol.swift in Sources */,
 				52A5CE792BA77F4600F2CFE7 /* ConstantsApp.swift in Sources */,
 				52A5CE6C2BA76EDD00F2CFE7 /* AppState.swift in Sources */,
 				52A5CE662BA6E9C300F2CFE7 /* LoginView.swift in Sources */,
 				52A5CE752BA77C5100F2CFE7 /* HTTPResponseCodes.swift in Sources */,
+				52A5CE902BA9001600F2CFE7 /* HerosModel.swift in Sources */,
 				52A5CE732BA77C1E00F2CFE7 /* Endpoints.swift in Sources */,
 				52A5CE242BA6D65A00F2CFE7 /* SceneDelegate.swift in Sources */,
 			);

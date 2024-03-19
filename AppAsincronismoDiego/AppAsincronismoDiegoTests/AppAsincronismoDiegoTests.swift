@@ -93,10 +93,35 @@ final class AppAsincronismoDiegoTests: XCTestCase {
         await userCase.logout()
         jwt = KC.loadKC(key: ConstantsApp.TOKEN_ID_KEYCHAIN)
         XCTAssertEqual(jwt, "")
+    
+    }
+    
+    func testUIErrorView() async throws {
+        let appStateVM = AppState(loginUseCase: LoginUseCaseFake())
+        appStateVM.statusLogin = .error
+        let vc = await ErrorViewController(appState: appStateVM, error: "Error")
+        XCTAssertNotNil(vc)
+    }
+    
+    func testUILoginView() throws {
+        XCTAssertNoThrow(LoginView())
+        let view = LoginView()
+        XCTAssertNotNil(view)
         
+        let logo = view.getLogoImageView()
+        XCTAssertNotNil(logo)
         
+        let txtUser = view.getEmailView()
+        XCTAssertNotNil(txtUser)
+        XCTAssertEqual(txtUser.placeholder, "Email")
         
+        let txtPassword = view.getPasswordView()
+        XCTAssertNotNil(txtPassword)
+        XCTAssertEqual(txtPassword.placeholder, "Password")
         
+        let view2 = LoginViewController(appState: AppState(loginUseCase: LoginUseCaseFake()))
+        XCTAssertNoThrow(view2.bindingUI())
+
     }
 
 }

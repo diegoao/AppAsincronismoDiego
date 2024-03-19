@@ -48,7 +48,7 @@ class LoginViewController: UIViewController {
     }
     
     //Suscriptor
-    func bindingUI(){
+    public func bindingUI(){
         //user(email)
         if let emailTextField = self.emailTextField{
             emailTextField.textPublisher
