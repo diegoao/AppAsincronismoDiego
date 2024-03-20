@@ -37,6 +37,7 @@ final class NetworkHeros: NetworkHerosProtocol {
             if let resp = response as? HTTPURLResponse{
                 if resp.statusCode == HTTPResponseCodes.SUCESS{
                     modelReturn = try! JSONDecoder().decode([HerosModel].self, from: data)
+                    modelReturn.removeLast()
                 }
             }
         }catch{

@@ -10,4 +10,5 @@ import Foundation
 enum Endpoints: String {
     case login = "/auth/login"
     case heros = "/heros/all"
+    case transform = "/heros/tranformations"
 }

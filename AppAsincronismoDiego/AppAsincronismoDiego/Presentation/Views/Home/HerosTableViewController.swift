@@ -39,6 +39,8 @@ class HerosTableViewController: UITableViewController {
         
         //Llamamos a binding
         binding()
+        
+    
     }
                                                                     
     @objc func closeSession(){
@@ -58,16 +60,6 @@ class HerosTableViewController: UITableViewController {
                                                                     
     // MARK: - Table view data source
     
-    public let fondoImage = {
-        let image = UIImageView(image: UIImage(named: "fondo2"))
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .scaleAspectFill
-        return image
-    }()
-    
-    func getFondoImageView() -> UIImageView {
-        fondoImage
-    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -94,10 +86,23 @@ class HerosTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 155
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            let heroe = viewModel.herosData[indexPath.row]
+            
+            
+        let tranforViewController = TransforTableViewController(viewModel: TransforViewModel(data: heroe.id))
+            navigationController?.pushViewController(tranforViewController, animated: true)
  
-}
+            return
+        }
+    
 
 
-#Preview {
-    HerosTableViewController(appState: AppState(loginUseCase: LoginUseCaseFake()), viewModel: HerosViewModel(userCaseHeros: HeroUseCaseFake()))
+        
 }
+ 
+
+
+
+
