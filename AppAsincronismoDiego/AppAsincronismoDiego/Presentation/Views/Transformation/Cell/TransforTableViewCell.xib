@@ -23,13 +23,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="110" height="138"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="FSv-tm-jJs"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="aGZ-Pg-NXE"/>
                                     <constraint firstAttribute="width" constant="110" id="acy-Xr-86O"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="140" id="s1U-6w-6Cr"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transformation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxP-51-UMZ">
                                 <rect key="frame" x="120" y="0.0" width="273" height="138"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.81562097290000002" green="0.47730154540000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -43,6 +45,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="nameTranformation" destination="bxP-51-UMZ" id="6hU-KX-8kN"/>
                 <outlet property="photo" destination="72m-sl-Y25" id="hmf-Mn-ikj"/>

@@ -1,15 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "fondo5x1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "fondo5.png",
+      "filename" : "fondo5x2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "fondo5x3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

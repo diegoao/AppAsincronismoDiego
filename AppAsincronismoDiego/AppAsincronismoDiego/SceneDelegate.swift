@@ -42,7 +42,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     //ver home
                     DispatchQueue.main.async {
                         print("vamos para el home")
-                        navi = UINavigationController(rootViewController: HerosTableViewController(appState: self.appState, viewModel: HerosViewModel()))
+                        navi = UINavigationController(rootViewController: HeroViewController(appState: self.appState, viewModel: HerosViewModel()))
                         self.window!.rootViewController = navi
                         self.window!.makeKeyAndVisible()
                     }

@@ -28,7 +28,7 @@ class HerosTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //llamamos a celda personalizada
+        //Registramos a celda personalizada
         tableView.register(UINib(nibName:"HeroTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         
         //Titulo en el navigation controller
@@ -88,12 +88,9 @@ class HerosTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            let heroe = viewModel.herosData[indexPath.row]
-            
-            
-        let tranforViewController = TransforTableViewController(viewModel: TransforViewModel(data: heroe.id))
+        let heroe = viewModel.herosData[indexPath.row]
+        let tranforViewController = TransforViewController(viewModel: TransforViewModel(data: heroe.id))
             navigationController?.pushViewController(tranforViewController, animated: true)
- 
             return
         }
     

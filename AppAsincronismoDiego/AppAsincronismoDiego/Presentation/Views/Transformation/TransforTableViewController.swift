@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-class TransforTableViewController: UITableViewController {
+class TransforTableViewController1: UITableViewController {
    
     // Outlets
     private var viewModel: TransforViewModel
