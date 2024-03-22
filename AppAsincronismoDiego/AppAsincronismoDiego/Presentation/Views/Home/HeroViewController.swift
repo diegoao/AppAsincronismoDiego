@@ -56,9 +56,6 @@ class HeroViewController: UIViewController {
 
         collectionView.dataSource = self
         collectionView.delegate = self
-//        let nib = UINib(nibName: String(describing: CellCustomCollectionViewCell.self), bundle: nil)
-//        collectionView.register(nib, forCellWithReuseIdentifier: CellCustomCollectionViewCell().reuseIdentifier)
-        
         collectionView.register(UINib(nibName:"CellCustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
 
         collectionView.backgroundColor = .clear

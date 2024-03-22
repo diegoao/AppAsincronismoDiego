@@ -11,6 +11,7 @@ import Combine
 class TransforViewController: UIViewController, UITableViewDelegate {
     
    
+    @IBOutlet weak var lbnotransfor: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     // Outlets
@@ -31,10 +32,9 @@ class TransforViewController: UIViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        lbnotransfor.isHidden = true
         tableView.dataSource = self
         tableView.delegate = self
-        
         tableView.register(UINib(nibName: "TransforTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         self.title = "Transformaciones"
         binding()
@@ -47,6 +47,13 @@ class TransforViewController: UIViewController, UITableViewDelegate {
             .sink(receiveValue: { _ in
                 //recargamos la tabla
                 self.tableView.reloadData()
+                if self.viewModel.transforData.count == 0 {
+                    self.lbnotransfor.isHidden = false
+                }else{
+                    self.lbnotransfor.isHidden = true
+                }
+                    
+              
             })
             .store(in: &suscriptors)
     }
@@ -79,7 +86,7 @@ extension TransforViewController: UITableViewDataSource {
     }
  
      func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 140
     }
 
 }

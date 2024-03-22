@@ -13,7 +13,7 @@ class TransforTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         layer.borderWidth = 1
-        layer.borderColor = UIColor.black.cgColor
+        layer.borderColor = UIColor.orange.cgColor
         layer.cornerRadius = 8
         clipsToBounds = true
         super.awakeFromNib()

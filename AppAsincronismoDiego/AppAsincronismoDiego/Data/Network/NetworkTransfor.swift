@@ -37,9 +37,7 @@ final class NetworkTransfor: NetworkTransforProtocol {
             
             if let resp = response as? HTTPURLResponse {
                 if resp.statusCode == HTTPResponseCodes.SUCESS {
-                    print(data.count)
                     transforReturn = try! JSONDecoder().decode([TransformationModel].self, from: data)
-                    print(transforReturn)
                 }
             }
             
@@ -49,8 +47,8 @@ final class NetworkTransfor: NetworkTransforProtocol {
         return transforReturn
     }
 }
-        
-        
+
+                
 //MARK: - Creamos la clase fail para testear la app
 
 final class NetworkTransforFake: NetworkTransforProtocol {
@@ -60,7 +58,7 @@ final class NetworkTransforFake: NetworkTransforProtocol {
                                                  name: "4. Super Saiyajin 3",
                                                  description: "Esta transformación es exclusiva de los videojuegos, ya que hemos podido verlo en Dragon Ball Heroes, Dragon Battlers, Raging Blast y su posterior secuela.",
                                                  photo:"https://areajugones.sport.es/wp-content/uploads/2019/07/super-saiyajin-3-vegeta-a-maxima-potencia_1680217-1024x576.jpg.webp")
-//                                                hero: UUID())
+//                                               
 
            return [transformation]
            

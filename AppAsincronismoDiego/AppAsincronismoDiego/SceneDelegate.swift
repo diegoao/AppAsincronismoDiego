@@ -33,7 +33,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 case .notValidate, .none:
                     //ver el login
                     DispatchQueue.main.async {
-                        print("vamos para el login")
                         navi = UINavigationController(rootViewController: LoginViewController(appState: self.appState))
                         self.window!.rootViewController = navi
                         self.window!.makeKeyAndVisible()
@@ -41,7 +40,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 case .success:
                     //ver home
                     DispatchQueue.main.async {
-                        print("vamos para el home")
                         navi = UINavigationController(rootViewController: HeroViewController(appState: self.appState, viewModel: HerosViewModel()))
                         self.window!.rootViewController = navi
                         self.window!.makeKeyAndVisible()

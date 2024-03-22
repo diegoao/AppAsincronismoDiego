@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransforViewController" customModule="AppAsincronismoDiego" customModuleProvider="target">
             <connections>
+                <outlet property="lbnotransfor" destination="Fei-8u-ffE" id="2Bq-5S-GrP"/>
                 <outlet property="tableView" destination="0w9-as-0EC" id="7rp-vw-MCs"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -29,8 +30,17 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0w9-as-0EC">
                     <rect key="frame" x="8" y="59" width="377" height="793"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No hay transformaciones para este héroe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fei-8u-ffE">
+                    <rect key="frame" x="16.666666666666657" y="336" width="360" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="360" id="1d3-eb-bIC"/>
+                        <constraint firstAttribute="height" constant="180" id="HiZ-0M-Rur"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -47,8 +57,10 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0w9-as-0EC" secondAttribute="trailing" constant="8" id="kTM-rK-EFp"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iMu-SH-oOm" secondAttribute="trailing" id="lKG-oH-cTj"/>
                 <constraint firstAttribute="bottom" secondItem="iMu-SH-oOm" secondAttribute="bottom" id="lwG-hF-NSZ"/>
+                <constraint firstItem="Fei-8u-ffE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qSp-Ak-kbc"/>
+                <constraint firstItem="Fei-8u-ffE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="tkz-Ji-qm8"/>
             </constraints>
-            <point key="canvasLocation" x="114" y="20"/>
+            <point key="canvasLocation" x="113.74045801526717" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>

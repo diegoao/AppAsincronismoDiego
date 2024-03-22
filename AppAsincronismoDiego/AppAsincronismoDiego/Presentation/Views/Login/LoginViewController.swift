@@ -55,7 +55,6 @@ class LoginViewController: UIViewController {
                 .receive(on: DispatchQueue.main)
                 .sink { [weak self] data in
                     if let user = data{
-                        print(user)
                         self?.usr = user
                     }
                 }
@@ -68,7 +67,6 @@ class LoginViewController: UIViewController {
                 .receive(on: DispatchQueue.main)
                 .sink { [weak self] data in
                     if let password = data{
-                        print(password)
                         self?.pass = password
                     }
                 }
