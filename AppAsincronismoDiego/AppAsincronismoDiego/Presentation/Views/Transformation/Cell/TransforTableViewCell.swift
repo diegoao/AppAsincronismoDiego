@@ -12,6 +12,10 @@ class TransforTableViewCell: UITableViewCell {
     @IBOutlet weak var nameTranformation: UILabel!
     
     override func awakeFromNib() {
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.black.cgColor
+        layer.cornerRadius = 8
+        clipsToBounds = true
         super.awakeFromNib()
         // Initialization code
     }
