@@ -54,7 +54,7 @@ final class NetworkTransfor: NetworkTransforProtocol {
 final class NetworkTransforFake: NetworkTransforProtocol {
     func getTransfor(filter: UUID) async -> [TransformationModel] {
         
-        let transformation = TransformationModel(id: UUID(),
+        let transformation = TransformationModel(id: UUID(uuidString: "17824501-1106-4815-BC7A-BFDCCEE43CC9")!,
                                                  name: "4. Super Saiyajin 3",
                                                  description: "Esta transformación es exclusiva de los videojuegos, ya que hemos podido verlo en Dragon Ball Heroes, Dragon Battlers, Raging Blast y su posterior secuela.",
                                                  photo:"https://areajugones.sport.es/wp-content/uploads/2019/07/super-saiyajin-3-vegeta-a-maxima-potencia_1680217-1024x576.jpg.webp")
