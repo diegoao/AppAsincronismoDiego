@@ -1,11 +1,11 @@
-# Práctica Programación Reactiva y asincronismo
+# Práctica Programación Reactiva y Asincronismo
 
 Práctica realizada para el módulo de Programación Reactiva y Asincronismo por Diego Andrades.
 
 **KeepCoding - Profesor Jose.**
 
 - Para este módulo se ha integrado programación reactiva con Combine y RXSwift.
-- Las llamadas de red las se ha realizado con Async Await.
+- Las llamadas de red las he realizado con Async Await.
 - La UI de login está creada 100% con código.
 - Internacionalización de los literales (traducciones) en Español e inglés.
 - Se ha implementado testing.
@@ -43,9 +43,6 @@ o en la contraseña.
 y contraseña accederemos a la lista de héroes donde podremos
 ver todos los personajes incluidos en la Api. Al realizar clic
 sobre ellos se nos abrirá la pantalla de transformaciones.
-```
-```
-3.Detalle Héroe -> Podemos ver la foto y una descripción del héroe su localización y en un CollectionView todas sus transformaciones.
 ```
 ```
 4. Transformación -> Ejemplo cuando un personaje no tiene transformaciones.
