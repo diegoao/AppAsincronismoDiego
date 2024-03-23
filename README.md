@@ -1,6 +1,6 @@
 # Práctica Programación Reactiva y asincronismo
 
-Práctica realizada para el módulo de Programación Reactiva y asincronismo por Diego Andrades.
+Práctica realizada para el módulo de Programación Reactiva y Asincronismo por Diego Andrades.
 
 **KeepCoding - Profesor Jose.**
 
