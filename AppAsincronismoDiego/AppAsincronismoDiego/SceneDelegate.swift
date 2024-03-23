@@ -47,8 +47,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 case.error:
                     //error
                     DispatchQueue.main.async {
-                        print("vamos para el error")
-                        navi = UINavigationController(rootViewController: ErrorViewController(appState: self.appState, error: "Error in user or password"))
+                        navi = UINavigationController(rootViewController: ErrorLoginViewController(appState: self.appState, error: "Error in user or password"))
                         self.window!.rootViewController = navi
                         self.window!.makeKeyAndVisible()
                     }

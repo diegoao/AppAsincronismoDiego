@@ -8,6 +8,7 @@
 import UIKit
 
 class TransforTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var photo: UIImageView!
     @IBOutlet weak var nameTranformation: UILabel!
     

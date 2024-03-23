@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  AppAsincronismoDiego
+
+  Created by Macbook Pro on 23/3/24.
+  
+*/
+// MARK: - Idioma Español
+
+"Email" = "Correo Electrónico";
+"Password" = "Contraseña";
+"Login" = "Acceder";
+"Hero List" = "Lista de Héroes";
+"Transformations" = "Transformaciones";
+"msgTransfor" = "No hay transformaciones para este héroe";
+"ErrorLogin" = "Error en usuario o contraseña";
+"ErrorButtonLogin" = "Volver Login";

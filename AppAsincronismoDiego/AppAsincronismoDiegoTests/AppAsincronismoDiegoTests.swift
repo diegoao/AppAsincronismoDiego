@@ -196,12 +196,14 @@ final class AppAsincronismoDiegoTests: XCTestCase {
     
     
     func testHeros_Domain() async throws {
-        let model = HerosModel(id: UUID(), favorite: true, description: "", photo: "", name: "goku")
+        let model = HerosModel(id: UUID(), favorite: true, description: "old", photo: "http://goku.es", name: "goku")
         XCTAssertNotNil(model)
         
         XCTAssertEqual(model.name, "goku")
-        XCTAssertEqual(model.favorite, true)
-        
+        XCTAssertEqual(model.description, "old")
+        XCTAssertEqual(model.photo, "http://goku.es")
+        XCTAssertEqual(model.name, "goku")
+     
     }
     
     func testHeros_Presentation() async throws {

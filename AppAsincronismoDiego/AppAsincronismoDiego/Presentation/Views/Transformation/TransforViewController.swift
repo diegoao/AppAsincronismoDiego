@@ -11,6 +11,7 @@ import Combine
 class TransforViewController: UIViewController, UITableViewDelegate {
     
    
+    @IBOutlet weak var errorNotransfortext: UILabel!
     @IBOutlet weak var lbnotransfor: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
@@ -36,7 +37,13 @@ class TransforViewController: UIViewController, UITableViewDelegate {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "TransforTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
-        self.title = "Transformaciones"
+        // Localizamos el idioma para el titulo de la navegación
+        let localizedString = NSLocalizedString("Transformations", comment: "Lista de transformaciones")
+        self.title = localizedString
+        //Localizamos el idioma del teléfono para el mensaje de error
+        let msgTransfor = NSLocalizedString("msgTransfor", comment: " Mensaje no hay transformaciones")
+        errorNotransfortext.text = msgTransfor
+        
         binding()
         
     }
@@ -86,7 +93,7 @@ extension TransforViewController: UITableViewDataSource {
     }
  
      func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 140
+        return 155
     }
 
 }

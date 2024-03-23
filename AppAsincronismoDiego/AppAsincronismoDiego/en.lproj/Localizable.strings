@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  AppAsincronismoDiego
+
+  Created by Macbook Pro on 23/3/24.
+  
+*/
+
+//MARK: - Idimo Ingles
+
+"Email" = "e-mail";
+"Password" = "Password";
+"Login" = "Login";
+"Hero List" = "Hero List";
+"Transformations" = "Transformations";
+"msgTransfor" = "There are no transformations for this hero";
+"ErrorLogin" = "Error in user o password";
+"ErrorButtonLogin" = "Back to Login";
+
+
+

@@ -31,7 +31,8 @@ class HeroViewController: UIViewController {
         super.viewDidLoad()
 
         //Titulo en el navigation controller
-        self.title = "Lista Heroes"
+        let localizedString = NSLocalizedString("Hero List", comment: "Lista de Héroes")
+        self.title = localizedString
         binding()
         //Añadir button para logout
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(closeSession))

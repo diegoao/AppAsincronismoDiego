@@ -60,7 +60,7 @@ class LoginView: UIView {
         textField.autocorrectionType = .no
         textField.autocapitalizationType = .none
         textField.autocorrectionType = .no
-        textField.placeholder = NSLocalizedString("Password", comment: "The Text password")
+        textField.placeholder = NSLocalizedString("Password", comment: "Es la contraseña")
         textField.layer.cornerRadius = 10
         //Sin esta parte no podemos ver el corner radius
         textField.layer.masksToBounds = true
@@ -73,7 +73,7 @@ class LoginView: UIView {
     // Botón
     let buttonLogin = {
         let button = UIButton(type: .system)
-        button.setTitle("Login", for: .normal)
+        button.setTitle(NSLocalizedString("Login", comment: "Es el boton"), for: .normal)
         button.backgroundColor = .orange.withAlphaComponent(0.6)
         button.setTitleColor(.white, for: .normal)
         button.setTitleColor(.gray, for: .disabled)
