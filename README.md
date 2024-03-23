@@ -4,7 +4,9 @@ Práctica realizada para el módulo de Programación Reactiva y asincronismo por
 
 **KeepCoding - Profesor Jose.**
 
-- Para este módulo se ha integrado programación reactiva con Combine.
+- Para este módulo se ha integrado programación reactiva con Combine y RXSwift.
+- Las llamadas de red las se ha realizado con Async Await.
+- La UI de login está creada 100% con código.
 - Internacionalización de los literales (traducciones) en Español e inglés.
 - Se ha implementado testing.
 - Patrón de diseño MVVM con todas las capas de Vista, Dominio, y Repository.
