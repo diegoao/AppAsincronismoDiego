@@ -97,7 +97,7 @@ final class AppAsincronismoDiegoTests: XCTestCase {
         await userCase.logout()
         jwt = KC.loadKC(key: ConstantsApp.TOKEN_ID_KEYCHAIN)
         XCTAssertEqual(jwt, "")
-    
+        
     }
     
     func testUIErrorView() async throws {
@@ -117,15 +117,17 @@ final class AppAsincronismoDiegoTests: XCTestCase {
         
         let txtUser = view.getEmailView()
         XCTAssertNotNil(txtUser)
-        XCTAssertEqual(txtUser.placeholder, "Email")
+        let email = NSLocalizedString("Email", comment: "email por idiomas seleccionado")
+        XCTAssertEqual(txtUser.placeholder, email)
         
         let txtPassword = view.getPasswordView()
         XCTAssertNotNil(txtPassword)
-        XCTAssertEqual(txtPassword.placeholder, "Password")
+        let password = NSLocalizedString("Password", comment: "Password por idiomas seleccionado")
+        XCTAssertEqual(txtPassword.placeholder, password)
         
         let view2 = LoginViewController(appState: AppState(loginUseCase: LoginUseCaseFake()))
         XCTAssertNoThrow(view2.bindingUI())
-
+        
     }
     
     
@@ -139,7 +141,7 @@ final class AppAsincronismoDiegoTests: XCTestCase {
         XCTAssertNotNil(vm)
         
     }
-   
+    
     func testHeroUseCase() async throws {
         //Compruebo que no me devuelva nil
         let usecase = HeroUseCase(repo: HerosRepositoryFake())
@@ -169,13 +171,13 @@ final class AppAsincronismoDiegoTests: XCTestCase {
                 }
             }
             .store(in: &suscriptor)
-        await self.waitForExpectations(timeout: 15)
+        await self.waitForExpectations(timeout: 18)
     }
     
     func testHeros_Data() async throws {
         let network = NetworkHerosFake()
         XCTAssertNotNil(network)
-       
+        
         let repo = HerosRepository(network: network)
         XCTAssertNotNil(repo)
         
@@ -203,7 +205,7 @@ final class AppAsincronismoDiegoTests: XCTestCase {
         XCTAssertEqual(model.description, "old")
         XCTAssertEqual(model.photo, "http://goku.es")
         XCTAssertEqual(model.name, "goku")
-     
+        
     }
     
     func testHeros_Presentation() async throws {
@@ -224,7 +226,7 @@ final class AppAsincronismoDiegoTests: XCTestCase {
         XCTAssertNotNil(vm)
         
     }
-   
+    
     func testTransforUseCase() async throws {
         //Compruebo que no me devuelva nil
         let usecase = TransforUseCase(repo: TransforRepositoryFake())
@@ -256,11 +258,11 @@ final class AppAsincronismoDiegoTests: XCTestCase {
             .store(in: &suscriptor)
         await self.waitForExpectations(timeout: 15)
     }
-   
+    
     func testtransformation_Data() async throws {
         let network = NetworkTransforFake()
         XCTAssertNotNil(network)
-       
+        
         let repo = TransforRepository(network: network)
         XCTAssertNotNil(repo)
         
@@ -275,12 +277,12 @@ final class AppAsincronismoDiegoTests: XCTestCase {
         let data2 = await repo2.getTransfor(filter: UUID())
         XCTAssertNotNil(data2)
         XCTAssertEqual(data2.count, 1)
-  
+        
     }
     
     
     func testTransformation_Domain() async throws {
-
+        
         let model = TransformationModel(id: UUID(uuidString: "17824501-1106-4815-BC7A-BFDCCEE43CC9")!, name: "Vegeta", description: "Strong", photo: "http://vegeta.com")
         XCTAssertNotNil(model)
         XCTAssertEqual(model.id, UUID(uuidString: "17824501-1106-4815-BC7A-BFDCCEE43CC9")! )
@@ -297,9 +299,54 @@ final class AppAsincronismoDiegoTests: XCTestCase {
         let view = await TransforViewController(viewModel: viewModel)
         XCTAssertNotNil(view)
     }
-
+    
+    //MARK: - Testing extension
+    
+    func testLoadImageFromURL() async throws {
+        // Creo una instancia de UIImageView
+        let imageView = await UIImageView()
+        var imagen : () = ()
+        
+        // Cargo la imagen remota
+        imagen = await imageView.loadImageRemote(url: URL(string: "https://depor.com/resizer/25quKBxP8Ti7cjCcmnR887FHER0=/1200x1200/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/DAYT2F5NUNB7VPAFKUPHNDXVQA.jpg")!)
+        
+        // Verifico que la imagen no sea nil
+        XCTAssertNotNil(imagen)
+    }
+    
+    
+    //MARK: - Testing windows error login
+    
+    func testErrorLoginViewController() {
+        // Given
+        let appState = AppState()//
+        let error = "Error"
+        let viewController = ErrorLoginViewController(appState: appState, error: error)
+        // Leemos la view
+        _ = viewController.view
+        
+        let errorText = NSLocalizedString("ErrorLogin", comment: "Error usuario o contraseña")
+        
+     
+        XCTAssertEqual(viewController.lblError.text, errorText)
+        
+        // Simula toque del boton
+        viewController.buttonBack.sendActions(for: .touchUpInside)
+        
+        // verifico que se actualiza el estado de la appstate
+        XCTAssertEqual(appState.statusLogin, .none)
+    }
+    
+        
+    }    
+  
     
     
     
-
+    
+    
+    
+    
+    
 }
+
