@@ -21,8 +21,7 @@ Práctica realizada para el módulo de Programación Reactiva y asincronismo por
 ## Información
 
 La práctica consta de varias pantallas:
-| ![Simulador1](https://github.com/diegoao/AppAsincronismoDiego/blob/main/Capturas%20imaganes%20readme/1.png) | ![Simulador2](https://github.com/diegoao/AppAsincronismoDiego/blob/main/Capturas%20imaganes%20readme/2.png) | ![Simulador3](https://github.com/diegoao/AppAsincronismoDiego/blob/main/Capturas%20imaganes%20readme/3.png) | ![Simulador4](https://github.com/diegoao/AppAsincronismoDiego/blob/main/Capturas%20imaganes%20readme/4.png) | ![Simulador5]
-(https://github.com/diegoao/AppAsincronismoDiego/blob/main/Capturas%20imaganes%20readme/5.png) |
+| ![Simulador1](https://github.com/diegoao/AppAsincronismoDiego/blob/main/Capturas%20imaganes%20readme/1.png) | ![Simulador2](https://github.com/diegoao/AppAsincronismoDiego/blob/main/Capturas%20imaganes%20readme/2.png) | ![Simulador3](https://github.com/diegoao/AppAsincronismoDiego/blob/main/Capturas%20imaganes%20readme/3.png) | ![Simulador4](https://github.com/diegoao/AppAsincronismoDiego/blob/main/Capturas%20imaganes%20readme/4.png) | ![Simulador5](https://github.com/diegoao/AppAsincronismoDiego/blob/main/Capturas%20imaganes%20readme/5.png) |
 | --- | --- | --- | --- | --- | 
 | 1 | 2 | 3 | 4 | 5 |
 
