@@ -337,16 +337,53 @@ final class AppAsincronismoDiegoTests: XCTestCase {
         XCTAssertEqual(appState.statusLogin, .none)
     }
     
+    
+    var sut: CellCustomCollectionViewCell!
+    var sut1: TransforTableViewCell!
+    
+        override func setUp() {
+            super.setUp()
+            sut = CellCustomCollectionViewCell()
+            sut1 = TransforTableViewCell()
+            // Cargo la vista de la celda
+            sut.awakeFromNib()
+            sut1.awakeFromNib()
+            sut1.photo?.layer.cornerRadius = sut1.photo.frame.size.width / 2
+            sut1.photo?.clipsToBounds = true
+            
+        }
+
+        override func tearDown() {
+            sut = nil
+            sut1 = nil
+            super.tearDown()
+        }
+
+        func testconfiVistaHero() {
+            // Verifico que la configuración de la vista la estoy haciendo correctamente
+            XCTAssertEqual(sut.layer.borderWidth, 1)
+            XCTAssertEqual(sut.layer.borderColor, UIColor.orange.cgColor)
+            XCTAssertEqual(sut.layer.cornerRadius, 8)
+            XCTAssertTrue(sut.clipsToBounds)
+        }
+
+        func testconfiVistaTransfor() {
+            // Verifico que la configuración de la vista la estoy haciendo correctamente
+            XCTAssertEqual(sut1.layer.borderWidth, 1)
+            XCTAssertEqual(sut1.layer.borderColor, UIColor.orange.cgColor)
+            XCTAssertEqual(sut1.layer.cornerRadius, 8)
+            XCTAssertTrue(sut1.clipsToBounds)
+
+    }
+
+    
+    
         
-    }    
+}
   
     
     
     
     
-    
-    
-    
-    
-}
+
 

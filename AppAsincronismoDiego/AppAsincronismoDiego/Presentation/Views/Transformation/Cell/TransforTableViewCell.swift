@@ -13,8 +13,8 @@ class TransforTableViewCell: UITableViewCell {
     @IBOutlet weak var nameTranformation: UILabel!
     
     override func awakeFromNib() {
-        photo.layer.cornerRadius = photo.frame.size.width / 2
-        photo.clipsToBounds = true
+        photo?.layer.cornerRadius = photo.frame.size.width / 2
+        photo?.clipsToBounds = true
         layer.borderWidth = 1
         layer.borderColor = UIColor.orange.cgColor
         layer.cornerRadius = 8
